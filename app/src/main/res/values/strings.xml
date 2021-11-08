@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Desafio</string>
-    <string name="bt_save">SALVAR</string>
+    <string name="bt_save">Salvar</string>
     <string name="cb_favorite">Favorito</string>
 </resources>

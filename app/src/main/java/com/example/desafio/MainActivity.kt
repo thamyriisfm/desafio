@@ -11,7 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.desafio.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.tasks.await
+//import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launchWhenCreated {
                 try {
                     withContext(Dispatchers.IO) {
-                        CadastroService().remove(cadastro).await()
+                        CadastroService().remove(cadastro)//.await()
                         cadViewModel.refreshData() // <<<<<< não dava ceto sem isso
                     }
                 } catch (e: Exception) {
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launchWhenCreated {
                 try {
                     withContext(Dispatchers.IO) {
-                        CadastroService().editFavorite(cadastro).await()
+                        CadastroService().editFavorite(cadastro)//.await()
                     }
                     cadViewModel.refreshData()
                 } catch (e: Exception) {
