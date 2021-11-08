@@ -1,15 +1,16 @@
 package com.example.desafio
 
+import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 
-class CadViewModel : ViewModel() {
+class CadViewModel(application: Application) : ViewModel() {
 
     lateinit var cadastros: LiveData<List<Cadastro>>
 
 
     fun refreshData(){
-       // CadAdapter().submitList(cadastros)
+
     }
 
     fun save(cadastro: Cadastro){}

@@ -11,9 +11,12 @@
         android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:background="@color/light_gray"
         android:hint="Nome"
         android:inputType="text"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,29 +25,39 @@
         android:id="@+id/et_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:background="@color/light_gray"
         android:hint="Idade"
         android:inputType="number"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <CheckBox
+        android:id="@+id/cb_favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cb_favorite"
-        app:layout_constraintTop_toBottomOf="@+id/et_age"
+        android:layout_marginVertical="16dp"
+        android:text="@string/cb_favorite"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/cb_favorite"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
 
     <Button
         android:id="@+id/bt_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="16dp"
+        android:backgroundTint="@color/gray"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="8dp"
         android:text="@string/bt_save"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
