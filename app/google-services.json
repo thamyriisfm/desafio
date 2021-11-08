@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "974699271352",
+    "firebase_url": "https://agenda-ad351-default-rtdb.firebaseio.com",
+    "project_id": "agenda-ad351",
+    "storage_bucket": "agenda-ad351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974699271352:android:304452b1ae7189fa95104d",
+        "android_client_info": {
+          "package_name": "com.example.desafio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974699271352-3rmujkrd6d8d34jivoj4j9uushhhdhi2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUY26wmXgvTI0xHUrIvEjpvwZHPBt5hcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974699271352-3rmujkrd6d8d34jivoj4j9uushhhdhi2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
