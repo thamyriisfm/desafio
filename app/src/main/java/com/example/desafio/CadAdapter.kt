@@ -6,8 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.desafio.databinding.RowCadBinding
 
-class CadAdapter(private val listener: CadListener?) :
-    ListAdapter<Cadastro, CadViewHolder>(ItemDiff) {
+class CadAdapter(private val listener: CadListener?) : ListAdapter<Cadastro, CadViewHolder>(ItemDiff) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CadViewHolder {
         val item = RowCadBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CadViewHolder(item.root, listener)

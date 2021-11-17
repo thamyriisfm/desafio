@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.desafio.databinding.ActivityNewFormBinding
 
-class FormActivity : AppCompatActivity() {
+class NewFormActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewFormBinding
     private var mId = ""
     override fun onCreate(savedInstanceState: Bundle?) {

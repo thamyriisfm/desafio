@@ -15,12 +15,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var cadViewModel: CadViewModel
 
     private val mListener: CadListener = object : CadListener {
         override fun edit(cadastro: Cadastro) {
-            val intent = Intent(this@MainActivity, FormActivity::class.java)
+            val intent = Intent(this@MainActivity, NewFormActivity::class.java)
             val bundle = Bundle()
             bundle.putParcelable(CadastrosConstants.CADASTRO_ARGS, cadastro)
             intent.putExtras(bundle)
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 try {
                     withContext(Dispatchers.IO) {
                         CadastroService().remove(cadastro)//.await()
-                        cadViewModel.refreshData() // <<<<<< não dava ceto sem isso
+                        cadViewModel.refreshData()
                     }
                 } catch (e: Exception) {
                     Log.w(TAG, "NÃO DEU CERTO !!! sz !!!", e)
@@ -44,7 +45,8 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launchWhenCreated {
                 try {
                     withContext(Dispatchers.IO) {
-                        CadastroService().editFavorite(cadastro)//.await()
+                        //CadastroService().editFavorite(cadastro)//.await()
+                        //(binding.rvList.adapter as CadAdapter).submitList(cadViewModel.cadastros.value)
                     }
                     cadViewModel.refreshData()
                 } catch (e: Exception) {
@@ -71,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         cadViewModel.refreshData()
 
         binding.btAdd.setOnClickListener {
-            cadLauncher.launch(Intent(this, FormActivity::class.java))
+            cadLauncher.launch(Intent(this, NewFormActivity::class.java))
         }
     }
 
