@@ -38,9 +38,9 @@ class CadastroService {
         return collection.document(cadastro.codigo).delete()
     }
 
-    fun getAll(): Task<List<Cadastro>> {
+    suspend fun getAll(): Task<List<Cadastro>> {
         return collection.get().continueWith {
-            val lista = it.result?.toObjects<Cadastro>()
+            val lista = it.result.toObjects<Cadastro>()
             lista
         }
     }
